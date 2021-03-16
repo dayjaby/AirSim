@@ -31,6 +31,7 @@ if [ "$(uname)" == "Darwin" ]; then # osx
     brew tap llvm-hs/homebrew-llvm
     brew install llvm@8
 else #linux
+    wget -O - https://bintray.com/user/downloadSubjectPublicKey?username=sbt | sudo apt-key add -
     sudo apt-get update
     sudo apt-get -y install --no-install-recommends \
         lsb-release \
